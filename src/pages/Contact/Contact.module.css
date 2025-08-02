@@ -1,0 +1,114 @@
+.contactContainer {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  flex-direction: column; /* default mobile layout */
+}
+
+/* Sidebar hidden by default */
+.sidebar {
+  display: none;
+}
+
+/* Theme 2 Layout */
+:global(body.theme2) .contactContainer {
+  flex-direction: row;
+  padding-left: 200px;
+}
+
+:global(body.theme2) .sidebar {
+  display: block;
+  width: 180px;
+  height: 100vh;
+  background-color: #1c1c1c;
+  color: white;
+  font-family: serif;
+  font-weight: bold;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 64px; /* below header */
+  z-index: 10;
+  border-right: 1px solid cyan;
+  overflow-y: auto;
+}
+
+:global(body.theme2) .sidebar * {
+  color: white !important;
+}
+
+/* Page Content */
+.pageContent {
+  flex: 1;
+  color: var(--text-color, #000);
+}
+
+:global(body.theme2) .pageContent {
+  color: white;
+}
+
+/* Contact Form */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.contactForm label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+.contactForm button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--button-bg, #007bff);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.contactForm button:hover {
+  background-color: var(--button-hover-bg, #0056b3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  :global(body.theme2) .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #febd69;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown {
+  padding: 6px;
+  font-size: 14px;
+  background-color: navajowhite;
+}
+
+.nav {
+ flex: 2;
+  display: flex;
+  justify-content: left;
+  gap: 40px;
+  margin-left: 40px;
+  
+}
+
+.link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: gray;
+}

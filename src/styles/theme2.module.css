@@ -1,0 +1,19 @@
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px; /* reduced from 1rem to 12px */
+  margin-top: 8px;
+}
+
+.card {
+  padding: 10px;
+  border: 1px solid cyan;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: white;
+  font-family: serif;
+  box-shadow: 0 1px 4px rgba(0, 255, 255, 0.2);
+}
+
+

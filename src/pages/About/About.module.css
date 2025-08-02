@@ -1,0 +1,88 @@
+/* About.module.css */
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column; /* default mobile layout */
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Sidebar default hidden */
+.sidebar {
+  display: none;
+}
+
+/* Theme 2 Sidebar Layout */
+:global(body.theme2) .aboutContainer {
+  flex-direction: row;
+  padding-left: 200px;
+}
+
+:global(body.theme2) .sidebar {
+  display: block;
+  width: 180px;
+  height: 100vh;
+  background-color: #1c1c1c;
+  color: white;
+  font-family: serif;
+  font-weight: bold;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 64px; /* below header */
+  z-index: 10;
+  border-right: 1px solid cyan;
+  overflow-y: auto;
+}
+
+/* Sidebar text color */
+:global(body.theme2) .sidebar * {
+  color: white !important;
+}
+
+/* Page Content */
+.pageContent {
+  flex: 1;
+  color: var(--text-color, #000);
+  line-height: 1.6;
+  margin-left: 20px;
+}
+
+.pageContent ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.pageContent li {
+  margin-bottom: 6px;
+  list-style: none;
+}
+
+.pageContent h3 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: brown;
+}
+
+/* Theme 2 Page Content */
+:global(body.theme2) .pageContent {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  :global(body.theme2) .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: 16px;
+  }
+}

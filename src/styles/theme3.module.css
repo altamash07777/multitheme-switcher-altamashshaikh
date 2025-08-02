@@ -1,0 +1,16 @@
+/* theme 3 */
+:root {
+  --bg-color: #fff5e1;
+  --text-color: #333;
+  --button-bg: #ff6f61;
+  --button-text: #fff;
+  --font-family: 'Pacifico', cursive;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
